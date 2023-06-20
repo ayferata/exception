@@ -41,17 +41,14 @@ public class Main {
     }
 }
 
-Hatayı Metot Tanımında Belirtmek
-
-
-Bir metot yazarken hata fırlatabilecek bir metot çağırıyorsak, ya metodun içerisinde try-catch bloğuyla bu hatayı yakalamalı ya da hata yakalamayı bir üst metoda bırakmalıyız. Fakat bu durumda, çağıran metodun bu hatadan haberdar olabilmesi için metodun hata fırlatabileceğini metodun tanımında belirtmeliyiz. Bunu throws deyimiyle yaparız. Örneğe bakalım:
-
-
 
 public class Person { private int age; 
-public void setAge(int age) throws IllegalArgumentException { 	
-if (age < 0) 		{
-throw new IllegalArgumentException("Yaş sıfırdan küçük olamaz!"); 		}
+public void setAge(int age) 
+throws IllegalArgumentException { 	
+if (age < 0) 		
+{
+throw new IllegalArgumentException("Yaş sıfırdan küçük olamaz!"); 		
+}
 
 this.age = age; 	}
 }
